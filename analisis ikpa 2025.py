@@ -7,7 +7,7 @@ import numpy as np
 st.set_page_config(page_title="IKPA 2025 - Professional Audit Dashboard", layout="wide")
 
 # --- KONFIGURASI DATA ---
-FILE_PATH = r"C:\Users\michael.sidabutar\Documents\analisis ikpa 2025\data.csv"
+FILE_PATH = "data.csv"
 
 # Bobot Komponen IKPA Resmi
 WEIGHTS = {
@@ -187,4 +187,5 @@ for i, tab in enumerate(tabs):
         st.dataframe(
             apply_audit_style(pic_df[full_audit_cols].sort_values('Nilai Akhir (Nilai Total/Konversi Bobot)')),
             hide_index=True, use_container_width=True
+
         )
